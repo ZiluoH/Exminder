@@ -30,7 +30,6 @@ class NavBar extends React.Component {
 				<div>
 					<Link to={'/signup'}>Signup</Link>
 					<Link to={'/login'}>Login</Link>
-          {/* <LoginFormContainer /> */}
 				</div>
 			);
 		}
