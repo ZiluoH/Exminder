@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
-import LoginFormContainer from '../session/login_form_container'
 
 class NavBar extends React.Component {
 	constructor(props) {
@@ -23,13 +22,6 @@ class NavBar extends React.Component {
 					<Link to={'/profile'}>Profile</Link>
 					<Link to={'/new_tweet'}>Write a Tweet</Link>
 					<button onClick={this.logoutUser}>Logout</button>
-				</div>
-			);
-		} else {
-			return (
-				<div>
-					<Link to={'/signup'}>Signup</Link>
-					<Link to={'/login'}>Login</Link>
 				</div>
 			);
 		}
