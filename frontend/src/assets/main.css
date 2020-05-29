@@ -10,3 +10,8 @@ html, body{
     max-width: 1200px;
     margin: auto;
 }
+
+@font-face{
+    font-family: AlexBrush;
+    src: url(./AlexBrush-Regular.ttf);
+}
