@@ -56,8 +56,12 @@ class SignupForm extends React.Component {
 
 	render() {
 		return (
-			<div className='session_form'>
-				<form onSubmit={this.handleSubmit}>
+			<div>
+				<h1 className='session_header'>
+					Organize all with
+					<span className='exminder'> Exminder</span>
+				</h1>
+				<form onSubmit={this.handleSubmit} className='session_form'>
 					<input
 						type='email'
 						value={this.state.email}

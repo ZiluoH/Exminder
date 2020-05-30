@@ -19,3 +19,14 @@
     font-size: 14px;
     background: #f2f2f2;
 }
+
+.session_header{
+    text-align: center;
+    font-size: 52px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.session_header .exminder{
+    color: #d90429;
+}
