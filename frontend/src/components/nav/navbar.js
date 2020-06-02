@@ -27,8 +27,8 @@ class NavBar extends React.Component {
 		} else {
 			return (
 				<ul className='nav-link'>
-					<Link to={'/login'}>Login</Link>
-					<Link to={'/signup'}>Signup</Link>
+					<Link to={'/login'} className='nav-link-login'>Login</Link>
+					<Link to={'/signup'} className='nav-link-signup'>Signup</Link>
 				</ul>
 			);
 		}

@@ -1,6 +1,6 @@
 .main-nav {
-  height: 70px;
-  background-color: silver;
+  height: 57px;
+  /* background-color: silver; */
   display: flex;
   justify-content: space-between;
 }
@@ -35,5 +35,21 @@
   padding: 0 18px;
   align-items: center;
   text-decoration: none;
+  letter-spacing: 1.2px;
+}
+
+.nav-link a:hover{
+  border-bottom: 2.5px solid #d90429;
+}
+
+.nav-link-login{
+  color: #8d99ae;
+}
+
+.nav-link-login:hover{
   color: #2b2d42;
+}
+
+.nav-link-signup{
+  color: #d90429;;
 }

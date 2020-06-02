@@ -14,9 +14,10 @@ class LoginForm extends React.Component {
 
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.renderErrors = this.renderErrors.bind(this);
+		this.demoUser = this.demoUser.bind(this);
 	}
 
-	componentWillReceiveProps(nextProps) {
+	UNSAFE_componentWillReceiveProps(nextProps) {
 		if (nextProps.currentUser === true) {
 			this.props.history.push('/tweets');
 		}
@@ -42,6 +43,13 @@ class LoginForm extends React.Component {
 		this.props.login(user);
 	}
 
+	demoUser() {
+		this.setState({
+			email:'demo@demo.com',
+			password:'password'
+		})
+	}
+
 	renderErrors() {
 		return (
 			<ul>
@@ -56,7 +64,7 @@ class LoginForm extends React.Component {
 		return (
 			<div>
 				<h1 className='session_header'>
-					Organize all with  
+					Organize all with
 					<span className='exminder'> Exminder</span>
 				</h1>
 				<form onSubmit={this.handleSubmit} className='session_form'>
@@ -75,6 +83,8 @@ class LoginForm extends React.Component {
 						required={true}
 					/>
 					<input type='submit' value='Submit' />
+					<br />
+					<button onClick={this.demoUser}>DEMO</button>
 					{this.renderErrors()}
 					<p>
 						Need an account?
