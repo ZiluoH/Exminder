@@ -45,9 +45,13 @@ class LoginForm extends React.Component {
 
 	demoUser() {
 		this.setState({
-			email:'demo@demo.com',
-			password:'password'
-		})
+			email: 'demo@demo.com',
+			password: 'password',
+		});
+
+		setTimeout(() => {
+			return this.props.login(this.state);
+		}, 1000);
 	}
 
 	renderErrors() {
@@ -68,23 +72,38 @@ class LoginForm extends React.Component {
 					<span className='exminder'> Exminder</span>
 				</h1>
 				<form onSubmit={this.handleSubmit} className='session_form'>
-					<input
-						type='email'
-						value={this.state.email}
-						onChange={this.update('email')}
-						placeholder='Email'
-						required={true}
-					/>
-					<input
+					<div className='session_form_item'>
+						<div className='session_form_label'>
+							<label>E-mail address</label>
+						</div>
+						<div className='session_form_input'>
+							<input
+								type='email'
+								value={this.state.email}
+								onChange={this.update('email')}
+								placeholder='E-mail address'
+								required={true}
+							/>
+						</div>
+					</div>
+					<div className='session_form_item'>
+						<div className='session_form_label'>
+							<label>Password</label>
+						</div>
+						<div className='session_form_input'>
+						<input
 						type='password'
 						value={this.state.password}
 						onChange={this.update('password')}
 						placeholder='Password'
 						required={true}
 					/>
+						</div>
+					</div>
+			
 					<input type='submit' value='Submit' />
 					<br />
-					<button onClick={this.demoUser}>DEMO</button>
+					<div onClick={this.demoUser}>DEMO</div>
 					{this.renderErrors()}
 					<p>
 						Need an account?

@@ -1,5 +1,5 @@
 .session_form{
-    width: 400px;
+    width: 500px;
     padding: 32px;
     font-size: 15px;
     border: solid 1px #dbdbdb;
@@ -31,4 +31,8 @@
 
 .session_header .exminder{
     color: #d90429;
+}
+
+.session_form_item{
+    display: flex;
 }

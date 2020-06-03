@@ -11,11 +11,11 @@ class Tweet extends React.Component {
     }
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.props.fetchTweets();
   }
 
-  componentWillReceiveProps(newState) {
+  UNSAFE_componentWillReceiveProps(newState) {
     this.setState({ tweets: newState.tweets });
   }
 

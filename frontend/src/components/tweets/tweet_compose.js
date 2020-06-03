@@ -13,7 +13,7 @@ class TweetCompose extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this);
   } 
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
       this.setState({newTweet: nextProps.newTweet.text});
   }
 
