@@ -1,38 +1,81 @@
-.session_form{
-    width: 500px;
-    padding: 32px;
-    font-size: 15px;
-    border: solid 1px #dbdbdb;
-    border-radius: 8px;
-    box-sizing: border-box;
-    margin: 0 auto 100px;
-    text-align: center;
+.session_form {
+	width: 500px;
+	padding: 32px;
+	font-size: 15px;
+	border: solid 1px #dbdbdb;
+	border-radius: 8px;
+	box-sizing: border-box;
+	margin: 0 auto 100px;
+	text-align: center;
 }
 
-.session_form input{
-    width: 80%;
-    outline: 0;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
+.session_form_input_field {
+	width: 80%;
+	outline: 0;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+	background: #f2f2f2;
+}
+
+.session_form_submit {
+	cursor: pointer;
+	border-radius: 25px;
+	width: 80%;
+	outline: 0;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
     font-size: 14px;
-    background: #f2f2f2;
+    background-color: #d90429;
+    color: #ffffff;
 }
 
-.session_header{
-    text-align: center;
-    font-size: 52px;
-    font-weight: bold;
-    letter-spacing: -1px;
-    margin-top: 120px;
-    margin-bottom: 100px;
+.session_header {
+	text-align: center;
+	font-size: 52px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	margin-top: 120px;
+	margin-bottom: 100px;
 }
 
-.session_header .exminder{
-    color: #d90429;
+.session_header .exminder {
+	color: #d90429;
 }
 
-.session_form_item{
+.session_form_item {
     display: flex;
+    margin-top: 20px;
+}
+
+.session_form_label {
+	width:40%;
+	text-align: left;
+	line-height: 3;
+}
+
+.session_form_label label {
+	padding-left: 6px;
+	border-left: 4px solid black;
+}
+
+.session_form_input {
+	width: 90%;
+}
+
+.demo_login{
+    background-color: #f2f2f2;
+    display: inline;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.session_form_switch{
+    padding-top: 10px;
+    margin: auto;
 }

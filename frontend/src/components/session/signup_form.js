@@ -62,39 +62,83 @@ class SignupForm extends React.Component {
 					<span className='exminder'> Exminder</span>
 				</h1>
 				<form onSubmit={this.handleSubmit} className='session_form'>
-					<input
-						type='email'
-						value={this.state.email}
-						onChange={this.update('email')}
-						placeholder='Email'
-						required={true}
-					/>
-					<input
-						type='text'
-						value={this.state.username}
-						onChange={this.update('username')}
-						placeholder='Username'
-						required={true}
-					/>
-					<input
-						type='password'
-						value={this.state.password}
-						onChange={this.update('password')}
-						placeholder='Password'
-						required={true}
-					/>
-					<input
-						type='password'
-						value={this.state.password2}
-						onChange={this.update('password2')}
-						placeholder='Confirm Password'
-						required={true}
-					/>
-					<input type='submit' value='Submit' />
+					<div className='session_form_item'>
+						<div className='session_form_label'>
+							<label>E-mail address</label>
+						</div>
+						<div className='session_form_input'>
+							<input
+								type='email'
+								className='session_form_input_field'
+								value={this.state.email}
+								onChange={this.update('email')}
+								placeholder='E-mail address'
+								required={true}
+							/>
+						</div>
+					</div>
+					<div className='session_form_item'>
+						<div className='session_form_label'>
+							<label>Username</label>
+						</div>
+						<div className='session_form_input'>
+							<input
+								type='text'
+								className='session_form_input_field'
+								value={this.state.username}
+								onChange={this.update('username')}
+								placeholder='10 characters or less'
+								required={true}
+							/>
+						</div>
+					</div>
+					<div className='session_form_item'>
+						<div className='session_form_label'>
+							<label>Password</label>
+						</div>
+						<div className='session_form_input'>
+							<input
+								type='password'
+								className='session_form_input_field'
+								value={this.state.password}
+								onChange={this.update('password')}
+								placeholder='At least 8 characters'
+								required={true}
+							/>
+						</div>
+					</div>
+					<div className='session_form_item'>
+						<div className='session_form_label'>
+							<label>Confirm password</label>
+						</div>
+						<div className='session_form_input'>
+							<input
+								type='password'
+								className='session_form_input_field'
+								value={this.state.password2}
+								onChange={this.update('password2')}
+								placeholder='At least 8 characters'
+								required={true}
+							/>
+						</div>
+					</div>
+
+					<div className='session_form_item'>
+						<div className='session_form_label'></div>
+						<div className='session_form_input'>
+							<input
+								type='submit'
+								value='Submit'
+								className='session_form_submit'
+							/>
+						</div>
+					</div>
 					{this.renderErrors()}
-					<p>
-						<Link to={'/login'}>Already have an account?</Link>
-					</p>
+					<div className='session_form_item'>
+						<p className='session_form_switch'>
+							<Link to={'/login'}>Already have an account?</Link>
+						</p>
+					</div>
 				</form>
 			</div>
 		);

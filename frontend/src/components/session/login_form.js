@@ -79,6 +79,7 @@ class LoginForm extends React.Component {
 						<div className='session_form_input'>
 							<input
 								type='email'
+								className='session_form_input_field'
 								value={this.state.email}
 								onChange={this.update('email')}
 								placeholder='E-mail address'
@@ -91,24 +92,37 @@ class LoginForm extends React.Component {
 							<label>Password</label>
 						</div>
 						<div className='session_form_input'>
-						<input
-						type='password'
-						value={this.state.password}
-						onChange={this.update('password')}
-						placeholder='Password'
-						required={true}
-					/>
+							<input
+								type='password'
+								className='session_form_input_field'
+								value={this.state.password}
+								onChange={this.update('password')}
+								placeholder='Password'
+								required={true}
+							/>
 						</div>
 					</div>
-			
-					<input type='submit' value='Submit' />
+					<div className='session_form_item'>
+						<div className='session_form_label'></div>
+						<div className='session_form_input'>
+							<input
+								type='submit'
+								value='Submit'
+								className='session_form_submit'
+							/>
+						</div>
+					</div>
 					<br />
-					<div onClick={this.demoUser}>DEMO</div>
+					<div className='demo_login' onClick={this.demoUser}>
+						Demo Login
+					</div>
 					{this.renderErrors()}
-					<p>
-						Need an account?
-						<Link to={'/signup'}>Register</Link>
-					</p>
+					<div className='session_form_item'>
+						<p className='session_form_switch'>
+							Need an account?
+							<Link to={'/signup'}>Register</Link>
+						</p>
+					</div>
 				</form>
 			</div>
 		);
